@@ -1,0 +1,5 @@
+Times Played:           22
+Average Attempts         4
+Win Percentage:      40.9%
+Current Streak:          0
+Longest Streak:          3
