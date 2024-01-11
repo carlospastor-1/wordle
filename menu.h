@@ -16,54 +16,19 @@ int sized;
 void ResetStats() {
     system("clear");
     std::string dummy;
-    std::ofstream film;
-    film.open("currentstreak.txt", std::ofstream::out | std::ofstream::trunc);
-    film.close();
-    std::ofstream filed;
-    filed.open("timesplayed.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    filed.open("topstreak.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    filed.open("wins.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    filed.open("attempts.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    filed.open("wordstats.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    filed.open("statssummary.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    filed.open("words.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    filed.open("win_stats.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    filed.open("attempcount_stats.txt", std::ofstream::out | std::ofstream::trunc);
-    filed.close();
-    std::ofstream r;
-    r.open("wins.txt", std::ios::app);
-    if (r.is_open()) {
-        r<<"0";
-        r.close();
+    std::ofstream file;
+    file.open("stats.txt", std::ofstream::out);
+    for (int i = 0; i < 6;i++) {
+        file<<"0"<<std::endl;
     }
-    r.open("currentstreak.txt", std::ios::app);
-    if (r.is_open()) {
-        r<<"0";
-        r.close();
-    }
-    r.open("topstreak.txt", std::ios::app);
-    if (r.is_open()) {
-        r<<"0";
-        r.close();
-    }
-    r.open("attempts.txt", std::ios::app);
-    if (r.is_open()) {
-        r<<"0";
-        r.close();
-    }
-    r.open("timesplayed.txt", std::ios::app);
-    if (r.is_open()) {
-        r<<"0";
-        r.close();
-    } 
+    file.close();
+    std::ofstream clear;
+    clear.open("wordstats.txt", std::ofstream::out | std::ofstream::trunc);
+    clear.close();
+    clear.open("statssummary.txt", std::ofstream::out | std::ofstream::trunc);
+    clear.close();
+    clear.open("words.txt", std::ofstream::out | std::ofstream::trunc);
+    clear.close();
     int times = 0;
     int averagecounter = 0;
     int winpercentage = 0;
