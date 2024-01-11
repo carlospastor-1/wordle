@@ -91,155 +91,7 @@ bool inList(std::string worda, std::string listed) {
         }
     return false;
 }
-char DupeinGuess(std::string guess) {
-    for (int i = 0; i < guess.length();i++) {
-        for (int j = i+1; j < guess.length();j++) {
-            if (guess[i] == guess[j]) {
-                guessdupe = guess[i];
-            }
-        }
-    }
-    return guessdupe;
-}
-int NumsofGuess_Dupe (std::string guess, std::string letter) {
-    for (int i = 0; i < guess.length();i++) {
-        if (std::to_string(guess[i]) == letter) {
-            guessdupecounter++;
-        }
-    }
-    return guessdupecounter;
-}
-int NumsofTarget_Dupe (std::string targeter, std::string letter) {
-    for (int i = 0; i < targeter.length();i++) {
-        if (std::to_string(targeter[i]) == letter) {
-            targetdupecounter++;
-        }
-    }
-    return targetdupecounter;
-}
-int NumsofTarget_Dupe2 (std::string targeter, std::string letter) {
-    for (int i = 0; i < targeter.length();i++) {
-        if (std::to_string(targeter[i]) == letter) {
-            target2dupecounter++;
-        }
-    }
-    return target2dupecounter;
-}
-int NumsofTarget_Dupe3 (std::string targeter, std::string letter) {
-    for (int i = 0; i < targeter.length();i++) {
-        if (std::to_string(targeter[i]) == letter) {
-            target3dupecounter++;
-        }
-    }
-    return target3dupecounter;
-}
-int NumsofTarget_Dupe4 (std::string targeter, std::string letter) {
-    for (int i = 0; i < targeter.length();i++) {
-        if (std::to_string(targeter[i]) == letter) {
-            target4dupecounter++;
-        }
-    }
-    return target4dupecounter;
-}
-int NumsofTarget_Dupe5 (std::string targeter, std::string letter) {
-    for (int i = 0; i < targeter.length();i++) {
-        if (std::to_string(targeter[i]) == letter) {
-            target5dupecounter++;
-        }
-    }
-    return target5dupecounter;
-}
-char DupeinTarget(std::string guess) {
-    for (int i = 0; i < guess.length();i++) {
-        for (int j = i+1; j < guess.length();j++) {
-            if (guess[i] == guess[j]) {
-                targetdupe = guess[i];
-            }
-        }
-    }
-    return targetdupe;
-}
-char SecondDupe_LetterinGuess(std::string target, std::string letter) {
-    for (int i = 0; i < target.length();i++) {
-        for (int j = i+1; j < target.length();j++) {
-            if (target[i] == target[j] && std::to_string(target[i]) != letter) {
-                second_dupe = target[i];
-            }
-        }
-    }
-    return second_dupe;
-}
-char SecondDupe_LetterinTarget(std::string target, std::string letter) {
-    for (int i = 0; i < target.length();i++) {
-        for (int j = i+1; j < target.length();j++) {
-            if (target[i] == target[j] && std::to_string(target[i]) != letter) {
-                targetdupe2 = target[i];
-            }
-        }
-    }
-    return targetdupe2;
-}
-char ThirdDuper_LetterinGuess(std::string target, std::string letter1,std::string letter2) {
-    for (int i = 0; i < target.length();i++) {
-        for (int j = i+1; j < target.length();j++) {
-            if (target[i] == target[j] && (std::to_string(target[i]) != letter1 && std::to_string(target[i])!=letter2)) {
-                third_dupe = target[i];
-            }
-        }
-    }
-    return third_dupe;
-}
-char FourthDuper_LetterinGuess(std::string target, std::string letter1,std::string letter2, std::string letter3) {
-    for (int i = 0; i < target.length();i++) {
-        for (int j = i+1; j < target.length();j++) {
-            if (target[i] == target[j] && (std::to_string(target[i]) != letter1 && std::to_string(target[i])!=letter2) && std::to_string(target[i]) != letter3) {
-                fourth_dupe = target[i];
-            }
-        }
-    }
-    return fourth_dupe;
-}
-char FifthDuper_LetterinGuess(std::string target, std::string letter1,std::string letter2, std::string letter3, std::string letter4) {
-    for (int i = 0; i < target.length();i++) {
-        for (int j = i+1; j < target.length();j++) {
-            if (target[i] == target[j] && (std::to_string(target[i]) != letter1 && std::to_string(target[i])!=letter2) && std::to_string(target[i]) != letter3 && std::to_string(target[i]) != letter4) {
-                fifth_dupe = target[i];
-            }
-        }
-    }
-    return fifth_dupe;
-}
-char ThirdDuper_LetterinTarget(std::string target, std::string letter1,std::string letter2) {
-    for (int i = 0; i < target.length();i++) {
-        for (int j = i+1; j < target.length();j++) {
-            if (target[i] == target[j] && (std::to_string(target[i]) != letter1 && std::to_string(target[i])!=letter2)) {
-                targetdupe3 = target[i];
-            }
-        }
-    }
-    return targetdupe3;
-}
-char FourthDuper_LetterinTarget(std::string target, std::string letter1,std::string letter2, std::string letter3) {
-    for (int i = 0; i < target.length();i++) {
-        for (int j = i+1; j < target.length();j++) {
-            if (target[i] == target[j] && (std::to_string(target[i]) != letter1 && std::to_string(target[i])!=letter2) && std::to_string(target[i]) != letter3) {
-                targetdupe4 = target[i];
-            }
-        }
-    }
-    return targetdupe4;
-}
-char FifthDuper_LetterinTarget(std::string target, std::string letter1,std::string letter2, std::string letter3, std::string letter4) {
-    for (int i = 0; i < target.length();i++) {
-        for (int j = i+1; j < target.length();j++) {
-            if (target[i] == target[j] && (std::to_string(target[i]) != letter1 && std::to_string(target[i])!=letter2) && std::to_string(target[i]) != letter3 && std::to_string(target[i]) != letter4) {
-                targetdupe5 = target[i];
-            }
-        }
-    }
-    return targetdupe5;
-}
-std::string PrintWordle(std::vector<int> test, int size) {
+std::string PrintWordle(std::vector<int> test, int size, std::string guess) {
     for (int i = 0; i < test.size();i++) {
         if (test[i] == 1) {
             wordle+=GREEN;
@@ -262,21 +114,21 @@ std::string PrintWordle(std::vector<int> test, int size) {
         if (test[i] == 1) {
             wordle+=GREEN;
             wordle+="| ";
-            wordle+=currentguess[i];
+            wordle+=guess[i];
             wordle+=" |";
             wordle+=RESET;
         }
         else if (test[i] == 2) {
             wordle+=YELLOW;
             wordle+="| ";
-            wordle+=currentguess[i];
+            wordle+=guess[i];
             wordle+=" |";
             wordle+=RESET;
         }
         else if (test[i] == 3) {
             wordle+=GREY;
             wordle+="| ";
-            wordle+=currentguess[i];
+            wordle+=guess[i];
             wordle+=" |";
             wordle+=RESET;
         }
@@ -403,521 +255,152 @@ void clearColors(std::string word) {
     }
     file.close();
 }
-void nodupe () {
-    
-}
 void PlayWordle(int size, std::string targets, std::string allowed) {
+    
+    int currentguessnum = 0, maxguess = 6, j = 0;
     wordle.clear();
     system("clear");
     std::cout<<"Input '6' to quit the game"<<std::endl;
     words = "Q4W4E4R4T4Y4U4I4O4P4A4S4D4F4G4H4J4K4L4Z4X4C4V4B4N4M4";
     clearColors(words);
-    streak = retractCurrent_Streak();
-    timesplayed = retractTimes_Played();
-    attempts = retractAttempts();
-    topstreak = retractTop_Streak();
-    wincount = retractWins();
     if (size == 0) {
         size = 5;
     }
     randomword(targets);
-    // target = "";
     uppercase(target);
-    std::string dummy;
-    char nondupe, nondupee, nonduper;
-    int maxguess = 6, currentguessnum = 0, tempguess = 0, firstdupe = 0, seconddupe = 0, thirddupe = 0, correct = 0;
-    int dupecounter = 0, seconddupecounter = 0, thirddupecounter = 0, fourthdupecounter = 0, fifthdupecounter = 0;
-    int guessfirstdupecounter = 0, guessseconddupecounter = 0, guessthirdupecounter = 0, guessfourthdupecounter = 0, guessfifthdupecounter = 0;
-    int targetcounter1 = 0, targetcounter2 = 0, targetcounter3 = 0, targetcounter4 = 0, targetcounter5 = 0;
-    char targetdupe1;
-    longestlengthword = 0;
-    resizer = 0;
     status = 2;
-    getline(std::cin,currentguess);
-    if (currentguess.length() == 1 && currentguess == "6") {
-            if (wordle != "") {
-                system("clear");
-                std::cout<<"Input '6' to quit the game"<<std::endl;
-                std::cout<<wordle<<std::endl;
-                std::cout<<"Enter guess: ";
-            }
-            else {
-                system("clear");
-                std::cout<<"Input '6' to quit the game"<<std::endl;
-                std::cout<<currentguessnum<<"/"<<maxguess<<std::endl;
-                std::cout<<"Enter guess: ";
-            }
-            std::string dummy;
-            std::cout<<std::endl<<"You have quit the game! This was considered as a loss."<<std::endl<<std::endl;
-            std::cout<<"The word was "<<target<<std::endl<<std::endl;
-            std::cout<<"Please press [enter] to continue"<<std::endl;
-            win = "Quit";
-            if (wincount == 0) {
-                wincount = 0;
-            }
-            timesplayed++;
-            if (streak>topstreak) {
-                topstreak = streak;
-            }
-            if (size >8) {
-                for (int i =0;i<8;i++) {
-                    longwords+=target[i];
-                }
-                longwords+="...";
-            }
-            streak = 0;
-            ClearStats();
-            savewords(target);
-            savewin_stats(win);
-            saveattempt_count(attempts);
-            longestword();
-            averagecounter = attempts/timesplayed;
-            winpercentage = (wincount/timesplayed)*100;
-            if (size > 8) {
-            SaveWordStats(longwords, currentguessnum, win, size, longestlengthword, timesplayed);
-            }
-            else {
-            SaveWordStats(target, currentguessnum, win, size, longestlengthword, timesplayed);
-            }
-            resizestats(longestlengthword);
-            SaveAttempts(attempts);
-            SaveCurrent_Streak(streak);
-            SaveTop_Streak(topstreak);
-            SaveTimesPlayed(timesplayed);
-            SaveWins(wincount);
-            SaveStatsSummary(timesplayed, averagecounter, winpercentage, streak, topstreak);
-            currentguessnum = 6;
-            getline(std::cin, dummy);
-            sendGameStatus(9);
-        }
+    std::string temptarget = target;
     while (currentguessnum < maxguess) {
-        auto start = std::chrono::high_resolution_clock::now();
-        std::cout<<"Enter guess: ";
-        getline(std::cin, currentguess);
-        if (currentguess.length() == 1 && currentguess == "6") {
-            std::string dummy;
-            std::cout<<std::endl<<"You have quit the game! This was considered as a loss."<<std::endl<<std::endl;
-            std::cout<<"The word was "<<target<<std::endl<<std::endl;
-            std::cout<<"Please press [enter] to continue"<<std::endl;
-            win = "Quit";
-            if (wincount == 0) {
-                wincount = 0;
-            }
-            timesplayed++;
-            if (streak>topstreak) {
-                topstreak = streak;
-            }
-            if (size >8) {
-                for (int i =0;i<8;i++) {
-                    longwords+=target[i];
-                }
-                longwords+="...";
-            }
-            streak = 0;
-            ClearStats();
-            savewords(target);
-            longestword();
-            savewin_stats(win);
-            saveattempt_count(attempts);
-            averagecounter = attempts/timesplayed;
-            winpercentage = (wincount/timesplayed)*100;
-            if (size > 8) {
-            SaveWordStats(longwords, currentguessnum, win, size, longestlengthword, timesplayed);
-            }
-            else {
-            SaveWordStats(target, currentguessnum, win, size, longestlengthword, timesplayed);
-            }
-            resizestats(longestlengthword);
-            SaveAttempts(attempts);
-            SaveCurrent_Streak(streak);
-            SaveTop_Streak(topstreak);
-            SaveTimesPlayed(timesplayed);
-            SaveWins(wincount);
-            SaveStatsSummary(timesplayed, averagecounter, winpercentage, streak, topstreak);
-            currentguessnum = 6;
-            getline(std::cin, dummy);
-            sendGameStatus(9);
-            continue;
+        retract_stats();
+        attempts = all_stats[0];
+        streak = all_stats[1];
+        timesplayed = all_stats[2];
+        topstreak = all_stats[3];
+        averagecounter = all_stats[4];
+        target = temptarget;
+        std::cout<<target<<std::endl;
+        currentguess = "";
+    std::cin>>currentguess;
+     if (currentguess == "6") {
+        std::string dummy;
+        std::cout<<std::endl<<"You have quit the game! This was considered as a loss."<<std::endl<<std::endl;
+        std::cout<<"The word was "<<target<<std::endl<<std::endl;
+        std::cout<<"Please press [enter] to continue"<<std::endl;
+        win = "Quit";
+        if (wincount == 0) {
+            wincount = 0;
         }
-        while(currentguess.length() <= size-1 || currentguess.length() > size) {
-            if (wordle != "") {
-                system("clear");
-                std::cout<<"Input '6' to quit the game"<<std::endl;
-                std::cout<<currentguessnum<<"/"<<maxguess<<std::endl;
-                std::cout<<wordle<<std::endl;
-                std::cout<<"Enter guess: ";
+        timesplayed++;
+        if (streak>topstreak) {
+            topstreak = streak;
+       }
+        if (size >8) {
+            for (int i =0;i<8;i++) {
+                longwords+=target[i];
             }
-            else {
-                system("clear");
-                std::cout<<"Input '6' to quit the game"<<std::endl;
-                std::cout<<"Enter guess: ";
-            }
-            getline(std::cin,currentguess);
-            if (currentguess.length() == 1 && currentguess == "6") {
-            std::string dummy;
-            std::cout<<std::endl<<"You have quit the game! This was considered as a loss."<<std::endl<<std::endl;
-            std::cout<<"The word was "<<target<<std::endl<<std::endl;
-            std::cout<<"Please press [enter] to continue"<<std::endl;
-            win = "Quit";
-            if (wincount == 0) {
-                wincount = 0;
-            }
-            timesplayed++;
-            if (streak>topstreak) {
-                topstreak = streak;
-            }
-            if (size >8) {
-                for (int i =0;i<8;i++) {
-                    longwords+=target[i];
-                }
-                longwords+="...";
-            }
-            streak = 0;
-            ClearStats();
-            savewords(target);
-            longestword();
-            averagecounter = attempts/timesplayed;
-            winpercentage = (wincount/timesplayed)*100;
-            if (size > 8) {
-            SaveWordStats(longwords, currentguessnum, win, size, longestlengthword, timesplayed);
-            }
-            else {
-            SaveWordStats(target, currentguessnum, win, size, longestlengthword, timesplayed);
-            }
-            resizestats(longestlengthword);
-            SaveAttempts(attempts);
-            SaveCurrent_Streak(streak);
-            SaveTop_Streak(topstreak);
-            SaveTimesPlayed(timesplayed);
-            SaveWins(wincount);
-            SaveStatsSummary(timesplayed, averagecounter, winpercentage, streak, topstreak);
-            currentguessnum = 6;
-            getline(std::cin, dummy);
-            sendGameStatus(9);
-            break;
+            longwords+="...";
         }
+        attempts++;
+        streak = 0;
+        ClearStats();  
+        savewords(target);  
+        savewin_stats(win);   
+        longestword();
+        averagecounter = attempts/timesplayed;
+        if (wincount == 0) {
+            winpercentage = 0;
         }
-        if (checkWord(currentguess, allowed) || inList(currentguess, targets)) {
-            uppercase(currentguess);
-            uppercase(target);
-            DupeinGuess(currentguess);
-            DupeinTarget(target);
-            std::vector<int> test(size);
-            system("clear");
-            thirddupe = 0;
-            seconddupe = 0;
-            firstdupe = 0;
-            tempguess = 0;
-            correct = 2;
-            guessfirstdupecounter = 0;
-            guessseconddupecounter = 0;
-            guessthirdupecounter = 0;
-            guessfourthdupecounter = 0;
-            guessfifthdupecounter = 0;
-            targetdupecounter = 0;
-            target2dupecounter = 0;
-            target3dupecounter = 0;
-            target4dupecounter = 0;
-            target5dupecounter = 0;
-            dupecounter = 0;
-            seconddupecounter = 0;
-            thirddupecounter = 0;
-            fourthdupecounter = 0;
-            fifthdupecounter = 0;
-            longwords.clear();
-            if (targetdupe == '*') {
-                for (int i = 0; i<size;i++) {
-                    if (i == 0) {
-                        DupeinGuess(currentguess);
-                        SecondDupe_LetterinGuess(currentguess, std::to_string (guessdupe));
-                        ThirdDuper_LetterinGuess(currentguess, std::to_string (guessdupe), std::to_string (second_dupe));
-                        FourthDuper_LetterinGuess(currentguess, std::to_string(guessdupe), std::to_string (second_dupe), std::to_string (third_dupe));
-                        FifthDuper_LetterinGuess(currentguess, std::to_string(guessdupe), std::to_string (second_dupe), std::to_string (third_dupe), std::to_string (fourth_dupe));
-                    }
-                    for (int j = 0;j<size;j++) {
-                        if (target.find(currentguess[i])<=size == false ){
-                            test[i] = 3;
-                            redirect(currentguess[i], '3');
-                        }
-                        if (currentguess[i] == target[i]) {
-                            test[i] = 1;
-                            redirect(currentguess[i], '1');
-                            if (currentguess[i] == guessdupe) {
-                                guessfirstdupecounter++;
-                            }
-                            else if (currentguess[i] == second_dupe) {
-                                guessseconddupecounter++;
-                            }
-                            else if (currentguess[i] == third_dupe) {
-                                guessthirdupecounter++;
-                            }
-                            else if (currentguess[i] == fourth_dupe) {
-                                guessfourthdupecounter++;
-                            }
-                            else if (currentguess[i] == fifth_dupe) {
-                                guessfifthdupecounter++;
-                            }
-                        }
-                    }
-                }
-                for (int i = 0; i< size;i++) {
-                    for (int j = 0;j<size;j++) {
-                        if (currentguess[i] == target[j] && currentguess[i] != target[i]) {
-                            redirect(currentguess[i], '2');
-                            if (currentguess[i] == guessdupe) {
-                                if (guessfirstdupecounter == 0) {
-                                    test[i] = 2;
-                                    guessfirstdupecounter++;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else if (currentguess[i] == second_dupe) {
-                                if (guessseconddupecounter == 0) {
-                                    test[i] = 2;
-                                    guessseconddupecounter++;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else if (currentguess[i] == third_dupe) {
-                                if (guessthirdupecounter == 0) {
-                                    test[i] = 2;
-                                    guessthirdupecounter++;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else if (currentguess[i] == fourth_dupe) {
-                                if (guessfourthdupecounter == 0) {
-                                    test[i] = 2;
-                                    guessfourthdupecounter++;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else if (currentguess[i] == fifth_dupe) {
-                                if (guessfifthdupecounter == 0) {
-                                    test[i] = 2;
-                                    guessfifthdupecounter++;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else {
-                                test[i] = 2;
-                            }
-                        }
-                    }
-                }
-            }
-            if (targetdupe != '*') {
-                DupeinTarget(target);
-                SecondDupe_LetterinTarget(target, std::to_string (targetdupe));
-                ThirdDuper_LetterinTarget(target, std::to_string (targetdupe), std::to_string (targetdupe2));
-                FourthDuper_LetterinTarget(target, std::to_string(targetdupe), std::to_string (targetdupe2), std::to_string (targetdupe3));
-                FifthDuper_LetterinTarget(target, std::to_string(targetdupe), std::to_string (targetdupe2), std::to_string (targetdupe3), std::to_string(targetdupe4));
-                NumsofTarget_Dupe(target, std::to_string (targetdupe));
-                NumsofTarget_Dupe2(target, std::to_string (targetdupe2));
-                NumsofTarget_Dupe3(target, std::to_string (targetdupe3));
-                NumsofTarget_Dupe4(target, std::to_string(targetdupe4));
-                NumsofTarget_Dupe5(target, std::to_string(targetdupe5));
-                DupeinGuess(currentguess);
-                SecondDupe_LetterinGuess(currentguess, std::to_string (guessdupe));
-                ThirdDuper_LetterinGuess(currentguess, std::to_string (guessdupe), std::to_string (second_dupe));
-                FourthDuper_LetterinGuess(currentguess, std::to_string(guessdupe), std::to_string(second_dupe), std::to_string (third_dupe));
-                FifthDuper_LetterinGuess(currentguess, std::to_string(guessdupe), std::to_string(second_dupe), std::to_string (third_dupe), std::to_string(fourth_dupe));
-                for (int i = 0; i < size;i++) {
-                    for (int j = 0;j<size;j++) {
-                        if (target.find(currentguess[i])<=size == false) {
-                            test[i] = 3;
-                            redirect(currentguess[i], '3');
-                        }
-                        else if (currentguess[i] == target[j] && i == j) {
-                            test[i] = 1;
-                            redirect(currentguess[i], '1');
-                            if (currentguess[i] == targetdupe) {
-                                guessfirstdupecounter++;
-                            }
-                            else if (currentguess[i] == targetdupe2) {
-                                guessseconddupecounter++;
-                            }
-                            else if (currentguess[i] == targetdupe3) {
-                                guessthirdupecounter++;
-                            }
-                            else if (currentguess[i] == targetdupe4) {
-                                guessfourthdupecounter++;
-                            }
-                            else if (currentguess[i] == targetdupe5) {
-                                guessfifthdupecounter++;
-                            }
-                        }
-                    }
-                }
-                for (int i = 0; i < size;i++) {
-                    for (int j = 0; j < size;j++) {
-                        if (currentguess[i] == target[j] && i == j) {
-                            if (currentguess[i] == guessdupe) {
-                                dupecounter++;
-                            }
-                            else if (currentguess[i] == second_dupe) {
-                                seconddupecounter++;
-                            }
-                            else if (currentguess[i] == third_dupe) {
-                                thirddupecounter++;
-                            }
-                            else if (currentguess[i] == fourth_dupe) {
-                                fourthdupecounter++;
-                            }
-                            else if (currentguess[i] == fifth_dupe) {
-                                fifthdupecounter++;
-                            }
-                        }
-                    }
-                }
-                for (int i = 0;i<size;i++) {
-                    for (int j = 0;j<size;j++) {
-                        redirect(currentguess[i], '2');
-                        if (currentguess[i] == target[j] && currentguess[i] != target[i]) {
-                        if (currentguess[i] == targetdupe) {
-                            if (guessfirstdupecounter!=targetdupecounter) {
-                                test[i] = 2;
-                                guessfirstdupecounter++;
-                                break;
-                            }
-                            else {
-                                test[i] = 3;
-                            }
-                        }
-                        else if (currentguess[i] == targetdupe2) {
-                            if (guessseconddupecounter!=target2dupecounter) {
-                                test[i] = 2;
-                                guessseconddupecounter++;
-                                break;
-                            }
-                            else {
-                                test[i] = 3;
-                            }
-                        }
-                        else if (currentguess[i] == targetdupe3) {
-                            if (guessthirdupecounter!=target3dupecounter) {
-                                test[i] = 2;
-                                guessthirdupecounter++;
-                                break;
-                            }
-                            else {
-                                test[i] = 3;
-                            }
-                        }
-                        else if (currentguess[i] == targetdupe4) {
-                            if (guessfourthdupecounter!=target4dupecounter) {
-                                test[i] = 2;
-                                guessfourthdupecounter++;
-                                break;
-                            }
-                            else {
-                                test[i] = 3;
-                            }
-                        }
-                        else if (currentguess[i] == targetdupe5) {
-                            if (guessfifthdupecounter!=target5dupecounter) {
-                                test[i] = 2;
-                                guessfifthdupecounter++;
-                                break;
-                            }
-                            else {
-                                test[i] = 3;
-                            }
-                        }
-                        else {
-                            if (currentguess[i] == guessdupe) {
-                                if (dupecounter == 0) {
-                                    test[i] = 2;
-                                    dupecounter++;
-                                    break;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else if (currentguess[i] == second_dupe) {
-                                if (seconddupecounter == 0) {
-                                    test[i] = 2;
-                                    seconddupecounter++;
-                                    break;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else if (currentguess[i] == third_dupe) {
-                                if (thirddupecounter == 0) {
-                                    test[i] = 2;
-                                    thirddupecounter++;
-                                    break;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else if (currentguess[i] == fourth_dupe) {
-                                if (fourthdupecounter == 0) {
-                                    test[i] = 2;
-                                    fourthdupecounter++;
-                                    break;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else if (currentguess[i] == fifth_dupe) {
-                                if (fifthdupecounter == 0) {
-                                    test[i] = 2;
-                                    fifthdupecounter++;
-                                    break;
-                                }
-                                else {
-                                    test[i] = 3;
-                                }
-                            }
-                            else {
-                                test[i] = 2;
-                            }
-                        }
-                        }
-                    }
-                }
-            }
-            status++;
-            attempts++;
-            currentguessnum++;
-            guessdupecounter = 0;
-            sendGameStatus(status);
-            auto end = std::chrono::high_resolution_clock::now();
-            auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-            std::cout<<"Executed in "<< duration << "ms"<<std::endl;
-            PrintWordle(test, size);
+        else {
+        winpercentage = (wincount/timesplayed)*100;
+        }
+        SaveWordStats(target, currentguessnum, win, size, longestlengthword, timesplayed);
+        resizestats(longestlengthword);
+        SaveStatsSummary(timesplayed, averagecounter, winpercentage, streak, topstreak);
+        getline(std::cin, dummy);
+        sendGameStatus(9);
+        save_stats(attempts,streak,timesplayed,topstreak,winpercentage,averagecounter);
+        currentguessnum = 6;
+        getline(std::cin, dummy);
+        continue;
+     }
+
+    if (currentguess.length() == 0 || currentguess.length() > size) {
+        system("clear");
             std::cout<<"Input '6' to quit the game"<<std::endl;
             std::cout<<currentguessnum<<"/"<<maxguess<<std::endl;
-            std::cout<<wordle;
-            if (currentguess == target) {
+            std::cout<<wordle<<std::endl;
+            std::cout<<"Enter guess: ";
+            std::cin>>currentguess;
+        }
+
+    if (checkWord(currentguess, allowed) || inList(currentguess, targets)) {
+        auto start = std::chrono::high_resolution_clock::now();
+        uppercase(currentguess);
+        uppercase(target);
+        std::vector<int> temp(size);
+        std::string tempguess = currentguess;
+        target = temptarget;
+        for (int i = 0; i < target.length();i++) {
+                if (currentguess[i] == target[i]) {
+                    redirect(currentguess[i], '1');
+                    temp[j] = 1;
+                    currentguess.erase(currentguess.begin()+i);
+                    target.erase(target.begin()+i);
+                    i--;
+                }
+                j++;
+        }
+        if (tempguess!= temptarget) {
+        j = 0;
+        int k = 0;
+        for (int i = 0; i < 6;i++) {
+            if (temp[j] == 1 ) {
+                j++;
+                i--;
+                continue;
+            }
+            else if (target.find(currentguess[i])<=target.length() == true) {
+                redirect(currentguess[i],'2');
+                for (k = 0; k < target.length();k++) {
+                    if (target[k] == currentguess[i]) {
+                        break;
+                    }
+                }
+                currentguess.erase(currentguess.begin()+i);
+                target.erase(target.begin()+k);
+                i--;
+                temp[j] = 2;
+            }
+            else {
+                temp[j] = 3;
+                redirect(currentguess[i],'3');
+            }
+            j++;
+        }
+        }        
+        status++;
+        attempts++;
+        currentguessnum++;
+        guessdupecounter = 0;
+        sendGameStatus(status);
+        auto end = std::chrono::high_resolution_clock::now();
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+        system("clear");
+        std::cout<<"Executed in "<< duration << "ms"<<std::endl;
+        std::cout<<"Input '6' to quit the game"<<std::endl;
+        std::cout<<currentguessnum<<"/"<<maxguess<<std::endl;
+        std::cout<<PrintWordle(temp, size,tempguess);
+        if (tempguess == temptarget) {
                 system("clear");
+                std::string dummy;
                 std::cout<<"Executed in "<< duration << "ms"<<std::endl;
-                std::cout<<wordle<<std::endl<<"Splendid!"<<std::endl<<std::endl<<"Press [enter] to continue"<<std::endl;
-                getline(std::cin, dummy);
+                std::cout<<wordle<<std::endl<<"Splendid!"<<std::endl<<std::endl<<"Input '1' to continue"<<std::endl;
                 win = "Yes";
                 timesplayed++;
                 wincount++;
                 streak++;
                 ClearStats();
                 savewords(target);
-                saveattempt_count(attempts);
-                savewin_stats(win);
                 longestword();
                 averagecounter = attempts/timesplayed;
                 winpercentage = (wincount/timesplayed)*100;
@@ -927,62 +410,43 @@ void PlayWordle(int size, std::string targets, std::string allowed) {
                 }
                 longwords+="...";
                 }
-                if (size > 8) {
-                SaveWordStats(longwords, currentguessnum, win, size, longestlengthword, timesplayed);
-                }
-                else {
-                SaveWordStats(target, currentguessnum, win, size, longestlengthword, timesplayed);
-                }
-                resizestats(longestlengthword);
-                SaveAttempts(attempts);
-                SaveCurrent_Streak(streak);
-                SaveTop_Streak(topstreak);
-                SaveTimesPlayed(timesplayed);
-                SaveWins(wincount);
+                SaveWordStats(temptarget, currentguessnum, win, size, longestlengthword, timesplayed);
+                save_stats(attempts,streak,timesplayed,topstreak,winpercentage,averagecounter);
                 SaveStatsSummary(timesplayed, averagecounter, winpercentage, streak, topstreak);
                 sendGameStatus(9);
                 break;
-            }
-            else if (currentguessnum == 6 && currentguess!= target) {
-            system("clear");
-            std::cout<<"Executed in "<< duration << "ms"<<std::endl;
-            std::cout<<wordle<<std::endl<<std::endl<<"The word was "<<target<<std::endl<<std::endl<<"Better luck next time!"<<std::endl<<std::endl;
-            std::cout<<"Press [enter] to continue";
-            getline(std::cin,dummy);
-            win = "No";
-            timesplayed++;
-            words = "Q4W4E4R4T4Y4U4I4O4P4A4S4D4F4G4H4J4K4L4Z4X4C4V4B4N4M4";
-            if (streak>topstreak) {
+    }
+
+    else if (currentguessnum == 6 && tempguess!= temptarget) {
+        system("clear");
+                std::string dummy;
+                std::cout<<"Executed in "<< duration << "ms"<<std::endl;
+                std::cout<<wordle<<std::endl<<std::endl<<"The word was "<<temptarget<<std::endl<<std::endl<<"Better luck next time!"<<std::endl<<std::endl;
+                std::cout<<"Input '1' to continue."<<std::endl;
+                std::cin>>dummy;
+                win = "No";
+                timesplayed++;
+                if (streak>topstreak) {
                 topstreak = streak;
-            }
-            streak = 0;
-            averagecounter = attempts/timesplayed;
-            winpercentage = (wincount/timesplayed)*100;
-            ClearStats();
-            savewords(target);
-            longestword();
-            if (size >8) {
+                }
+                streak = 0;
+                ClearStats();
+                savewords(target);
+                longestword();
+                averagecounter = attempts/timesplayed;
+                winpercentage = (wincount/timesplayed)*100;
+                if (size >8) {
                 for (int i =0;i<8;i++) {
                     longwords+=target[i];
                 }
                 longwords+="...";
                 }
-            if (size > 8) {
-                SaveWordStats(longwords, currentguessnum, win, size, longestlengthword, timesplayed);
-                }
-                else {
-                SaveWordStats(target, currentguessnum, win, size, longestlengthword, timesplayed);
-                }
-                resizestats(longestlengthword);
-            SaveAttempts(attempts);
-            SaveCurrent_Streak(streak);
-            SaveTop_Streak(topstreak);
-            SaveTimesPlayed(timesplayed);
-            SaveWins(wincount);
-            SaveStatsSummary(timesplayed, averagecounter, winpercentage, streak, topstreak);
-            sendGameStatus(9);
-            break;
-            }
-        }
+                SaveWordStats(temptarget, currentguessnum, win, size, longestlengthword, timesplayed);
+                SaveStatsSummary(timesplayed, averagecounter, winpercentage, streak, topstreak);
+                save_stats(attempts,streak,timesplayed,topstreak,winpercentage,averagecounter);
+                sendGameStatus(9);
+                break;
     }
-}
+    }
+    }
+    }
