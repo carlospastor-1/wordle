@@ -350,12 +350,14 @@ void PlayWordle(int size, std::string targets, std::string allowed) {
         for (int i = 0; i < target.length();i++) {
             if (target.find(currentguess[i])<=target.length() ) {
                 if (temp[i] != 1) {
+                    redirect(currentguess[i], '2');
                 temp[i] = 2;
                 }
             }
             else if (target.find(currentguess[i])<=target.length() == false){
                 if (temp[i] != 1) {
-                temp[i] = 3;
+                    redirect(currentguess[i], '3');
+                    temp[i] = 3;
                 }
             }
         }  
