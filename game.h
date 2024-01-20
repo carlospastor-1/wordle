@@ -343,41 +343,22 @@ void PlayWordle(int size, std::string targets, std::string allowed) {
         for (int i = 0; i < target.length();i++) {
                 if (currentguess[i] == target[i]) {
                     redirect(currentguess[i], '1');
-                    temp[j] = 1;
-                    currentguess.erase(currentguess.begin()+i);
-                    target.erase(target.begin()+i);
-                    i--;
+                    temp[i] = 1;
+                    target[i] = '-';
                 }
-                j++;
         }
-        if (tempguess!= temptarget) {
-        j = 0;
-        int k = 0;
-        for (int i = 0; i < 6;i++) {
-            if (temp[j] == 1 ) {
-                j++;
-                i--;
-                continue;
-            }
-            else if (target.find(currentguess[i])<=target.length() == true) {
-                redirect(currentguess[i],'2');
-                for (k = 0; k < target.length();k++) {
-                    if (target[k] == currentguess[i]) {
-                        break;
-                    }
+        for (int i = 0; i < target.length();i++) {
+            if (target.find(currentguess[i])<=target.length() ) {
+                if (temp[i] != 1) {
+                temp[i] = 2;
                 }
-                currentguess.erase(currentguess.begin()+i);
-                target.erase(target.begin()+k);
-                i--;
-                temp[j] = 2;
             }
-            else {
-                temp[j] = 3;
-                redirect(currentguess[i],'3');
+            else if (target.find(currentguess[i])<=target.length() == false){
+                if (temp[i] != 1) {
+                temp[i] = 3;
+                }
             }
-            j++;
-        }
-        }        
+        }  
         status++;
         attempts++;
         currentguessnum++;
